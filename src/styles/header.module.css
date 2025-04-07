@@ -1,0 +1,82 @@
+.logo {
+	height: auto;
+	width: 4em;
+}
+
+.header, .menu, .menu nav {
+	display: flex;
+	place-items: center;
+}
+
+.header {
+	justify-content: space-between;
+	padding: 1.2em 1em;
+	position: relative;
+	width: 100%;
+}
+
+/* .menu {} */
+
+.menu nav {
+	gap: 2.8em;
+}
+
+.menu nav a {
+	color: hsl(var(--color-dark-grayish-blue));
+	text-decoration: none;
+
+}
+
+.menu nav a:hover {
+	color: hsl(var(--color-soft-red));
+}
+
+.toggler {
+	position: unset;
+	right: 1em;
+	z-index: 1;
+}
+
+.menu_e {
+	position: fixed;
+}
+
+.menu_c {
+	position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+	.menu {
+		background: hsla(var(--color-very-dark-blue), 50%);
+		inset: 0;
+		place-content: flex-end;
+		position: fixed;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.menu nav {
+		background-color: hsl(var(--color-off-white));
+		gap: 0;
+		display: flex;
+		flex-direction: column;
+		font-size: 1.4em;
+		height: 100%;
+		max-width: 300px;
+		padding: 1.5rem;
+		place-items: flex-start;
+		width: 100%;
+	}
+
+	.menu nav a {
+		color: hsla(var(--color-very-dark-blue));
+		margin: .75em 0;
+	}
+
+	.menu nav a:first-child {
+		margin-top: 6.5em;
+	}
+
+}

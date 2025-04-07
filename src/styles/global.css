@@ -1,32 +1,41 @@
 :root {
-	/* colors */
-	--light	: 254, 253, 249;
-	--gray-1	: 197, 195, 206;
-	--gray-2	: 178, 178, 197;
-	--gray-3 : 116, 112, 126;
-	--dark	: 2, 0, 32;
+	/* primary */
+	--color-soft-orange: 35, 77%, 62%;
+	--color-soft-red: 5, 85%, 63%;
 
-	--yellow	: 227, 168, 76;
-	--orange	: 220, 87, 77;
+	/* neutral */
+	--color-off-white: 36, 100%, 99%;
+	--color-grayish-blue: 233, 8%, 79%;
+	--color-dark-grayish-blue: 236, 13%, 42%;
+	--color-very-dark-blue: 240, 100%, 5%;
 
-	/* size */
-	--sm: 402px;
-	--md: 813px;
-	--xl: 1220px;
-	--fl: 100%
+	/* typography */
+	--font-body: 15px;
+
+	/* breakpoints */
+	--breakpoint-mobile: 375px;
+	--breakpoint-tablet: 768px;
+	--breakpoint-desktop: 1150px;
+	--breakpoint-large-desktop: 1440px;
 }
 
-*, *::before, *::after {box-sizing: border-box;}
+*, *::before, *::after {
+	box-sizing: border-box;
+}
 
 * {
 	margin: 0;
 }
 
-html, body {height: 100%;}
+html, body {
+	height: 100%;
+}
 
 body {
-	background-color: rgb(var(--light));
-	line-height: 1.5;
+	background-color: hsl(var(--color-off-white));
+	color: hsl(var(--color-very-dark-blue));
+	font-size: var(--font-body);
+	font-family: "Inter", sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -35,16 +44,34 @@ img, picture, video, canvas, svg {
 	max-width: 100%;
 }
 
-input, button, textarea, select {font: inherit;}
+button, a {
+	display: block;
+}
 
 button {
 	background: none;
-	outline: none;
+	font: inherit;
+	padding: 0;
 	border: none;
 	cursor: pointer;
-	padding: 0;
 }
 
-p, h1, h2, h3, h4, h5, h6, span {overflow-wrap: break-word;}
+h1, h2, h3, h4, h5, h6, a, p {
+	line-height: 1;
+	overflow-wrap: break-word;
+}
 
-#root, #__next {isolation: isolate;}
+
+#__next {
+	max-width: var(--breakpoint-desktop);
+	place-content: center;
+	min-height: 100%;
+	margin: auto;
+	gap: 2em;
+	display: flex;
+	flex-direction: column;
+}
+
+#root, #__next {
+	isolation: isolate;
+}
