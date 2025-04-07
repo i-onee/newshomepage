@@ -2,7 +2,7 @@ import { Header, Hero, SideContent, NumbereContent } from "@/components";
 import { Fragment } from "react";
 import { clsx } from "@/utils";
 import Head from "next/head";
-import style from "../styles/main.module.css";
+import style from "@/styles/main.module.css";
 
 const Home: React.FC = () => {
   return (
