@@ -1,13 +1,13 @@
 :root {
 	/* primary */
-	--color-soft-orange: 35, 77%, 62%;
-	--color-soft-red: 5, 85%, 63%;
+	--color-soft-orange: hsl(35, 77%, 62%);
+	--color-soft-red: hsl(5, 85%, 63%);
 
 	/* neutral */
-	--color-off-white: 36, 100%, 99%;
-	--color-grayish-blue: 233, 8%, 79%;
-	--color-dark-grayish-blue: 236, 13%, 42%;
-	--color-very-dark-blue: 240, 100%, 5%;
+	--color-off-white: hsl(36, 100%, 99%);
+	--color-grayish-blue: hsl(233, 8%, 79%);
+	--color-dark-grayish-blue: hsl(236, 13%, 42%);
+	--color-very-dark-blue: hsl(240, 100%, 5%);
 
 	/* typography */
 	--font-body: 15px;
@@ -27,13 +27,15 @@
 	margin: 0;
 }
 
-html, body {
+html {
 	height: 100%;
 }
 
 body {
-	background-color: hsl(var(--color-off-white));
-	color: hsl(var(--color-very-dark-blue));
+	background-color: var(--color-off-white);
+	color: var(--color-very-dark-blue);
+	min-height: 100%;
+	display: flex;
 	font-size: var(--font-body);
 	font-family: "Inter", sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -65,7 +67,6 @@ h1, h2, h3, h4, h5, h6, a, p {
 #__next {
 	max-width: var(--breakpoint-desktop);
 	place-content: center;
-	min-height: 100%;
 	margin: auto;
 	gap: 2em;
 	display: flex;
